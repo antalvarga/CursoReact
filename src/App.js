@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+// aula 9 - (-03:52)
+import Routes from './routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './style.css';
+import Header from './components/Header';
+import Main from './pages/main';
+/*
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <h1>Hello World!</h1>
+                <h1>Hello zord asvarga</h1>
+            </div>
+        );
+    }
 }
+*/
+
+const App = () => (
+    <div className="App">
+        <Header />
+        <Routes />
+    </div>
+);
 
 export default App;
